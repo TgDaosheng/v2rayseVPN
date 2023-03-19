@@ -25,9 +25,9 @@ DIRECT = direct
 🇸🇬_新加坡_2
 
  = ss, 54.169.166.215, 443, encrypt-method = aes-256-cfb, password = amazonskr05
-#🇯🇵日本VirMach-clone
-#
-#= ss, virmach.jp.securevpn.cc, 1020, encrypt-method = aes-128-gcm, password = 202303000000000000000020
+🇯🇵日本VirMach-clone
+
+ = ss, virmach.jp.securevpn.cc, 1020, encrypt-method = aes-128-gcm, password = 202303000000000000000020, tcp = true
 🇺🇸美国-trojan管理平台 = vmess, 192.203.230.109, 8880, username = b09be280-8693-47f0-dac9-e5833f12605d, ws = true, tls = false, vmess-aead = true, ws-path = /?ed=2048, ws-headers = Host:"cs.llaqqccjj.top", skip-cert-verify = true, tfo = false
 
 [Proxy Group]
