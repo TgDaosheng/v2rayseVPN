@@ -14,94 +14,76 @@ external-controller: ':9090'
 dns:
   enabled: true
   nameserver:
-    - 223.5.5.5
-    - 223.6.6.6
+    - 1.1.1.1
+    - 1.0.0.1
   fallback:
     - 1.1.1.1
-    - 8.8.8.8
+    - 1.0.0.1
     - tls://1.1.1.1:853
-    - tls://dns.google:853
-
 proxies:
+  - {"name":"🇭🇰香港","type":"vmess","server":"18.163.196.214","port":80,"cipher":"auto","uuid":"4369367a-e205-4413-9cf9-438bcb791083","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
-  - {"name":"🇸🇬_新加坡_1\r\r","type":"ss","server":"54.254.190.29","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬_新加坡_2\r\r","type":"ss","server":"54.169.166.215","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇺🇸美国-trojan管理平台","type":"vmess","server":"192.203.230.109","port":8880,"cipher":"auto","uuid":"b09be280-8693-47f0-dac9-e5833f12605d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"cs.llaqqccjj.top"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -124,11 +106,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇭🇰香港
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - "🇸🇬_新加坡_1\r\r"
-      - "🇸🇬_新加坡_2\r\r"
-      - 🇺🇸美国-trojan管理平台
 
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
@@ -3148,7 +3128,6 @@ rules:
   - DOMAIN-SUFFIX,yt.be,🌍 国外媒体
   - DOMAIN-SUFFIX,ytimg.com,🌍 国外媒体
   - DOMAIN,music.youtube.com,🌍 国外媒体
-# 长风网站，自动注入
   - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
   - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
   - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
