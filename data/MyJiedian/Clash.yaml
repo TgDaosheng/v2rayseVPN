@@ -14,17 +14,19 @@ external-controller: ':9090'
 dns:
   enabled: true
   nameserver:
-    - 1.1.1.1
-    - 1.0.0.1
+    - 223.5.5.5
+    - 223.6.6.6
   fallback:
     - 1.1.1.1
-    - 1.0.0.1
+    - 8.8.8.8
     - tls://1.1.1.1:853
-proxies:
+    - tls://dns.google:853
+
+- proxies:
   - {"name":"🇭🇰香港","type":"vmess","server":"18.163.196.214","port":80,"cipher":"auto","uuid":"4369367a-e205-4413-9cf9-438bcb791083","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
-proxy-groups:
+  proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
