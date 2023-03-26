@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Surfboard
-# 创建时间：2023-03-26 23:17:26
+# 创建时间：2023-03-26 23:25:01
 # 使用模版：123
-# 节点数量：7
+# 节点数量：6
 ####################################
 
 [General]
@@ -20,8 +20,6 @@ DIRECT = direct
 🇭🇰香港 = vmess, 18.163.196.214, 80, username = 4369367a-e205-4413-9cf9-438bcb791083, ws = true, tls = false, vmess-aead = true, ws-path = , skip-cert-verify = true, tfo = false
 🇩🇪德国 IP = vmess, 192.203.230.155, 443, username = 71d40863-0215-4454-9ed7-7b83f9fd61e5, ws = true, tls = true, vmess-aead = true, ws-path = /vmess, ws-headers = Host:"doprax.dsvpn.ml", skip-cert-verify = true, tfo = false
 🇺🇸美国 IP = vmess, 192.203.230.109, 443, username = 4149bc4d-3d37-447e-9bad-0cbba00d4843, ws = true, tls = true, vmess-aead = true, ws-path = /vm, ws-headers = Host:"replit.dsvpn.ml", skip-cert-verify = true, tfo = false
-🇨🇳中国台湾
- = ss, hzdx.pangupy.com, 56820, encrypt-method = aes-256-gcm, password = 4d5a811b-2289-43c3-a042-abd484e7505b
 🇺🇸备用丨美国 = vmess, a9ffebcf-9d18-4865-b0a8-81ce4306a416.interface.buzz, 443, username = 285adff2-eb0b-41f6-80d7-8a8fc65b10fc, ws = true, tls = false, vmess-aead = true, ws-path = /index.html, ws-headers = Host:"apps.apple.com", skip-cert-verify = true, tfo = false
 🇸🇬SG丨新加坡
  = trojan, 1a03879e-145d-4b60-8c14-a2ff5e0aca74.interface.buzz, 21651, password = 285adff2-eb0b-41f6-80d7-8a8fc65b10fc, udp-delay = true, skip-cert-verify = true, sni = apps.apple.com, ws = false
@@ -29,35 +27,27 @@ DIRECT = direct
  = trojan, cd529a06-85c5-4662-9157-a0ce584cd324.interface.buzz, 15602, password = 285adff2-eb0b-41f6-80d7-8a8fc65b10fc, udp-delay = true, skip-cert-verify = true, sni = apps.apple.com, ws = false
 
 [Proxy Group]
-🔰 节点选择 = select, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+🔰 节点选择 = select, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
-♻️ 自动选择 = url-test, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+♻️ 自动选择 = url-test, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
 , url = http://www.gstatic.com/generate_204, interval = 300
-🎥 NETFLIX = select, 🔰 节点选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+🎥 NETFLIX = select, 🔰 节点选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
 ⛔️ 广告拦截 = select, 🛑 全球拦截, 🎯 全球直连, 🔰 节点选择
 🚫 运营劫持 = select, 🛑 全球拦截, 🎯 全球直连, 🔰 节点选择
-🌍 国外媒体 = select, 🔰 节点选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+🌍 国外媒体 = select, 🔰 节点选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
 🌏 国内媒体 = select, 🎯 全球直连, 🔰 节点选择
-Ⓜ️ 微软服务 = select, 🎯 全球直连, 🔰 节点选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+Ⓜ️ 微软服务 = select, 🎯 全球直连, 🔰 节点选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
-📲 电报信息 = select, 🔰 节点选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+📲 电报信息 = select, 🔰 节点选择, 🎯 全球直连, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
-🍎 苹果服务 = select, 🔰 节点选择, 🎯 全球直连, ♻️ 自动选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+🍎 苹果服务 = select, 🔰 节点选择, 🎯 全球直连, ♻️ 自动选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
 🎯 全球直连 = select, DIRECT
 🛑 全球拦截 = select, REJECT, DIRECT
-🐟 漏网之鱼 = select, 🔰 节点选择, 🎯 全球直连, ♻️ 自动选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇨🇳中国台湾
-, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
+🐟 漏网之鱼 = select, 🔰 节点选择, 🎯 全球直连, ♻️ 自动选择, 🇭🇰香港, 🇩🇪德国 IP, 🇺🇸美国 IP, 🇺🇸备用丨美国, 🇸🇬SG丨新加坡
 , 🇯🇵JP丨日本
 
 [Rule]
