@@ -18,12 +18,12 @@ dns:
 proxies:
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
-  - name: 🇭🇰香港
-    type: pptp
-    server: 223.122.97.176
-    port: 1723
-    username: 7170610
-    password: 7170610
+  #- name: 🇭🇰香港
+  #  type: pptp
+  #  server: 223.122.97.176
+  #  port: 1723
+  #  username: 7170610
+  #  password: 7170610
 
 proxy-groups:
   - name: 🔰 节点选择
