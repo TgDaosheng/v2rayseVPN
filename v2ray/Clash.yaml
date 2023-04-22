@@ -6,9 +6,15 @@ log-level: info
 external-controller: ':9090'
 
 dns:
-  - 1.1.1.1
-  - 1.0.0.1
-disable-ip-translation: true
+  enabled: true
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
 
 proxies:
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
