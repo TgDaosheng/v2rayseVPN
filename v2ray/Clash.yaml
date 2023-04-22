@@ -11,18 +11,21 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: ':9090'
-
 dns:
-  - 223.5.5.5
-  - 119.29.29.29
-disable-ip-translation: true
-
+  enabled: true
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
 proxies:
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
   - {"name":"🇭🇰香港-1️","type":"pptp","server":"alsonchan0512.asuscomm.com","port":1723,"username":"7170610","password":"7170610"}
   - {"name":"🇭🇰香港-2","type":"pptp","server":"223.122.97.176","port":1723,"username":"7170610","password":"7170610"}
-
 proxy-groups:
   - name: 🔰 节点选择
     type: select
