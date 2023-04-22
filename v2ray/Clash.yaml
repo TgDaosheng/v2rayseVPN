@@ -15,7 +15,6 @@ external-controller: ':9090'
 dns:
   - 223.5.5.5
   - 119.29.29.29
-  - 8.8.8.8
 disable-ip-translation: true
 
 proxies:
@@ -32,6 +31,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
