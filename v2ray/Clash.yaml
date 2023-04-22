@@ -11,28 +11,25 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: ':9090'
+
 dns:
-  enabled: true
-  nameserver:
-    - 1.1.1.1
-    - 1.0.0.1
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.1.1.1:853
-    - tls://dns.google:853
+  - 223.5.5.5
+  - 119.29.29.29
+  - 8.8.8.8
+disable-ip-translation: true
 
 proxies:
-  - {"name":"🇯🇵JP 01","type":"vmess","server":"192.203.230.65","port":443,"cipher":"auto","uuid":"b44cf32e-2213-4b98-bb21-8efb38fd9381","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/kbjc/jp1","headers":{"host":"jp1.hnokkdf.top"}}}
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
+  - {"name":"🇭🇰香港-1️","type":"pptp","server":"alsonchan0512.asuscomm.com","port":1723,"username":"7170610","password":"7170610"}
+  - {"name":"🇭🇰香港-2","type":"pptp","server":"223.122.97.176","port":1723,"username":"7170610","password":"7170610"}
+
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
   - name: ♻️ 自动选择
@@ -40,18 +37,20 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -70,9 +69,10 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -83,26 +83,29 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,9 +121,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵JP 01
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
+      - 🇭🇰香港-1️
+      - 🇭🇰香港-2
 
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
