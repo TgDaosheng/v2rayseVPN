@@ -1,10 +1,3 @@
-####################################
-# 创建者：v2rayse.com
-# 客户端：Clash
-# 创建时间：2023-04-01 20:48:01
-# 使用模版：123
-# 节点数量：3
-####################################
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -21,11 +14,17 @@ dns:
     - 8.8.4.4
     - tls://1.1.1.1:853
     - tls://dns.google:853
+
 proxies:
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
-  - {"name":"🇭🇰香港-1️","type":"pptp","server":"alsonchan0512.asuscomm.com","port":1723,"username":"7170610","password":"7170610"}
-  - {"name":"🇭🇰香港-2","type":"pptp","server":"223.122.97.176","port":1723,"username":"7170610","password":"7170610"}
+  - name: 🇭🇰香港
+    type: pptp
+    server: 223.122.97.176
+    port: 1723
+    username: 7170610
+    password: 7170610
+
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -34,8 +33,7 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -43,8 +41,7 @@ proxy-groups:
     proxies:
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -53,8 +50,7 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -75,8 +71,7 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -89,8 +84,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: 📲 电报信息
     type: select
     proxies:
@@ -98,8 +92,7 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -108,8 +101,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -127,8 +119,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港-1️
-      - 🇭🇰香港-2
+      - 🇭🇰香港
 
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
