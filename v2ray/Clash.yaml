@@ -4,26 +4,15 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: ':9090'
+
 dns:
-  enabled: true
-  nameserver:
-    - 1.1.1.1
-    - 1.0.0.1
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.1.1.1:853
-    - tls://dns.google:853
+  - 1.1.1.1
+  - 1.0.0.1
+disable-ip-translation: true
 
 proxies:
   - {"name":"🇺🇸美国 IP","type":"vmess","server":"192.203.230.109","port":443,"cipher":"auto","uuid":"4149bc4d-3d37-447e-9bad-0cbba00d4843","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vm","headers":{"host":"replit.dsvpn.ml"}}}
   - {"name":"🇩🇪德国 IP","type":"vmess","server":"192.203.230.155","port":443,"cipher":"auto","uuid":"71d40863-0215-4454-9ed7-7b83f9fd61e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"doprax.dsvpn.ml"}}}
-  #- name: 🇭🇰香港
-  #  type: pptp
-  #  server: 223.122.97.176
-  #  port: 1723
-  #  username: 7170610
-  #  password: 7170610
 
 proxy-groups:
   - name: 🔰 节点选择
@@ -33,7 +22,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -41,7 +29,6 @@ proxy-groups:
     proxies:
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -50,7 +37,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -71,7 +57,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -84,7 +69,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: 📲 电报信息
     type: select
     proxies:
@@ -92,7 +76,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -101,7 +84,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -119,7 +101,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇺🇸美国 IP
       - 🇩🇪德国 IP
-      - 🇭🇰香港
 
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
